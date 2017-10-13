@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>profile</title>
+</head>
+<body>
+    <h1>用户资料页面</h1>
+    <div>
+        <ul class='nav pull-right'>
+        <li><a href='/topic'>首页</a></li>
+</ul>
+    </div>
+    <div>
+        {{ user.id }}
+    </div>
+    <div>
+        用户名{{ user.username }}
+    </div>
+    <div>
+        你的头像
+        <a class="user_avatar pull-left">
+                                 <img src="/uploads/{{user.user_image}}"
+                            title={{user.username}}>
+                            </a>
+    </div>
+    <title>上传头像</title>
+    <h1>上传新头像</h1>
+    <form method=post action={{ url_for(".add_img") }} enctype=multipart/form-data>
+      <p><input type=file name=file>
+         <input type=submit value=点击上传>
+    </form>
+
+</body>
+</html>
