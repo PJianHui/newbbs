@@ -51,7 +51,10 @@
                    class="topic-tab current-tab">
                     返回主页
                 </a>
-
+                <a href="/mail"
+                   class="topic-tab current-tab">
+                    发送私信
+                </a>
                 {% for b in bs %}
                 <a href="/topic?board_id={{ b.id }}"
                    class="topic-tab current-tab">
@@ -76,6 +79,7 @@
         <div class='cell reply_area reply_item'>
             <div class='author_content'>
                 <a href="/user/leiwei1991" class="user_avatar">
+
 
                 </a>
                 <div class='user_info'>
